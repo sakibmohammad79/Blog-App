@@ -25,10 +25,11 @@ type Profile {
 }
 
 type Mutation {
-    signUp(name: String!, email: String!, password: String!): UserArgs
+    signUp(name: String!, email: String!, password: String!): AuthPayload
+    logIn(password: String!, email: String!): AuthPayload
 }
 
-type UserArgs {
+type AuthPayload {
     token: String
     message: String
 }
