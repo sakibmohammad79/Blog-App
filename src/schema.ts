@@ -25,7 +25,12 @@ type Profile {
 }
 
 type Mutation {
-    signUp(name: String!, email: String!, password: String!): User
+    signUp(name: String!, email: String!, password: String!): UserArgs
+}
+
+type UserArgs {
+    token: String
+    message: String
 }
 
 type Query {
