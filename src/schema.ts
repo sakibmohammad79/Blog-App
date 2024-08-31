@@ -29,6 +29,11 @@ type AuthPayload {
     message: String
 }
 
+type PostPayload {
+    message: String
+    post: Post
+}
+
 type Mutation {
     signUp(
         name: String!,
@@ -39,7 +44,13 @@ type Mutation {
 
     logIn(password: String!, email: String!): AuthPayload,
 
-    createPost(title: String!, content: String!, authorId: ID!): Post
+    createPost(post: PostInput!): PostPayload,
+    updatePost(postId: ID!, post: PostInput!): PostPayload
+}
+
+input PostInput {
+    title: String
+    content: String
 }
 
 type Query {
