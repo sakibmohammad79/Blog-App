@@ -32,6 +32,7 @@ const main = async () => {
         req.headers.authorization as string
       );
       // console.log(userInfo);
+      // console.log("Context function called");
 
       return {
         prisma,
