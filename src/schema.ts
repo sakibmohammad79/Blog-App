@@ -48,9 +48,9 @@ type Mutation {
 type Query {
   posts: [Post]
   post(id: ID!): Post
-  me(id: ID!): User
+  me: User
   users: [User]
-  myProfile(id: ID!): Profile
+  myProfile(userId: ID!): Profile
 }
 
 type AuthPayload {
