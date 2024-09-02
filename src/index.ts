@@ -5,9 +5,8 @@ import { resolvers } from "./resolvers";
 import { Prisma, PrismaClient } from "@prisma/client";
 import { DefaultArgs } from "@prisma/client/runtime/library";
 import { jwtHelper } from "./helpers/jwtHelpers";
-import { userInfo } from "os";
 
-const prisma = new PrismaClient();
+export const prisma = new PrismaClient();
 
 interface IContext {
   prisma: PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>;
